@@ -53,7 +53,7 @@ pickRandom = (iday, array, size) ->
     index = random(iday, j) % result.length
     result.splice(index, 1)
   result
-parse = (e) ->
+parse = (iday, e) ->
   result = Object.clone e
   if result.name.indexOf('%v') != -1
     result.name = result.name.replace('%v', varNames[random(iday, 12) % varNames.length])
@@ -65,7 +65,7 @@ parse = (e) ->
 pickRandomActivity = (iday, activities, size) ->
   picked_events = pickRandom(iday, activities, size)
   for e, i in picked_events
-    picked_events[i] = parse e
+    picked_events[i] = parse iday, e
   picked_events
 bbRecipe = (iday, num) ->
   r = switch num
