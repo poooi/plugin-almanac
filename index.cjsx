@@ -108,7 +108,7 @@ interval = null
 
 module.exports =
   name: 'KanColleAlmanac'
-  priority: 101
+  priority: 9
   displayName: [<FontAwesome key={0} name='calendar' />, ' 舰娘黄历']
   description: '舰娘老黄历改二移植版，在此感谢原作者 HY Little'
   author: 'Magica'
