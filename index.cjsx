@@ -142,7 +142,7 @@ module.exports =
                 <div style={flex: 1, backgroundColor: '#ffffaa', paddingBottom: 10}>
                 {
                   for i in [0...numGood]
-                    <div>
+                    <div key={i}>
                       <h4><strong>{eventArr[i].name}</strong></h4>
                       <div style={color: '#777', fontSize: '90%'}>{eventArr[i].good}</div>
                     </div>
@@ -154,7 +154,7 @@ module.exports =
                 <div style={flex: 1, backgroundColor: '#ffddd3', paddingBottom: 10}>
                 {
                   for i in [0...numBad]
-                    <div>
+                    <div key={-i}>
                       <h4><strong>{eventArr[numGood + i].name}</strong></h4>
                       <div style={color: '#777', fontSize: '90%'}>{eventArr[numGood + i].bad}</div>
                     </div>
