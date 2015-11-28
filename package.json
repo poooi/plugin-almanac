@@ -1,0 +1,24 @@
+{
+  "name": "poi-plugin-almanac",
+  "version": "1.0.0",
+  "description": "Lao Huang Li",
+  "main": "index.cjsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poooi/plugin-almanac.git"
+  },
+  "keywords": [
+    "Lao",
+    "Huang",
+    "Li"
+  ],
+  "author": "Magica",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poooi/plugin-almanac/issues"
+  },
+  "homepage": "https://github.com/poooi/plugin-almanac#readme"
+}
