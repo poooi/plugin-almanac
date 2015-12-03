@@ -109,11 +109,11 @@ interval = null
 module.exports =
   name: 'KanColleAlmanac'
   priority: 9
-  displayName: [<FontAwesome key={0} name='calendar' />, ' 舰娘黄历']
+  displayName: <span><FontAwesome key={0} name='calendar' />{' 舰娘黄历'}</span>
   description: '舰娘老黄历改二移植版，在此感谢原作者 HY Little'
   author: 'Magica'
   link: 'https://github.com/magicae'
-  version: '1.0.0'
+  version: '1.0.2'
   reactClass: React.createClass
     getInitialState: ->
       today = new Date()
