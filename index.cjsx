@@ -7,6 +7,17 @@ today = null
 weeks = ['日', '一', '二', '三', '四', '五', '六']
 directions = ['北方', '东方', '南方', '西方', '天花板', '地板']
 
+window.i18n.almanac = new(require 'i18n-2')
+  locales:['en-US', 'ja-JP', 'zh-CN', 'zh-TW'],
+  defaultLocale: 'zh-CN',
+  directory: path.join(__dirname, 'i18n'),
+  updateFiles: false,
+  indent: "\t",
+  extension: '.json'
+  devMode: false
+window.i18n.almanac.setLocale(window.language)
+__ = window.i18n.almanac.__.bind(window.i18n.almanac)
+
 activities = [
   {name: '大型舰建造', good: '4k/6k/6k/3k走起！8小时！', bad: '4k/6k/6k/3k走起！4小时！'},
   {name: '普通舰建造', good: '彩底舰娘不是梦', bad: '2-4-11，哐哐哐哐'},
@@ -109,11 +120,11 @@ interval = null
 module.exports =
   name: 'KanColleAlmanac'
   priority: 9
-  displayName: <span><FontAwesome key={0} name='calendar' />{' 舰娘黄历'}</span>
-  description: '舰娘老黄历改二移植版，在此感谢原作者 HY Little'
+  displayName: <span><FontAwesome key={0} name='calendar' /> {__ 'Almanac'}</span>
+  description: __ "An Chinese almanac"
   author: 'Magica'
   link: 'https://github.com/magicae'
-  version: '1.0.2'
+  version: '1.1.0'
   reactClass: React.createClass
     getInitialState: ->
       today = new Date()
