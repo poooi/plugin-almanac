@@ -15,10 +15,19 @@
     "Huang",
     "Li"
   ],
-  "author": "Magica",
+  "author": {
+    "name": "Magica",
+    "link": "https://github.com/magicae"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/poooi/plugin-almanac/issues"
   },
-  "homepage": "https://github.com/poooi/plugin-almanac#readme"
+  "homepage": "https://github.com/poooi/plugin-almanac#readme",
+  "poiPlugin": {
+    "title": "Almanac",
+    "description": "An Chinese almanac",
+    "icon": "fa/calendar",
+    "priority": 9
+  }
 }
