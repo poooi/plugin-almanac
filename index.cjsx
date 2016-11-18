@@ -1,7 +1,11 @@
 path = require 'path-extra'
 {relative, join} = require 'path-extra'
-{$, _, $$, React, ReactBootstrap, FontAwesome, ROOT, layout} = window
+{$, _, $$, React, ReactBootstrap, ROOT, layout} = window
 {Alert, Grid, Col, Input, DropdownButton, Table, MenuItem, Button} = ReactBootstrap
+
+# This is to solve react-fontawesome require bug which influenced v7.2.0
+# You may remove this if you are doing ES refactoring
+FontAwesome = if require('react-fontawesome')?.default? then require('react-fontawesome').default else require('react-fontawesome')
 
 today = null
 weeks = ['日', '一', '二', '三', '四', '五', '六']
