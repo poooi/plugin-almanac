@@ -215,12 +215,13 @@ const css = `
 
 
 class Almanac extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     const today = new Date()
     this.state = {
       iday: (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate(),
     }
+    this.handleRefreshDay = this._handleRefreshDay.bind(this)
   }
 
   componentDidMount() {
@@ -231,7 +232,7 @@ class Almanac extends Component {
     clearInterval(this.interval)
   }
 
-  handleRefreshDay() {
+  _handleRefreshDay() {
     const today = new Date()
     const newIday = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate()
     if (this.state.iday !== newIday) {
