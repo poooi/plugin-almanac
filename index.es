@@ -294,7 +294,7 @@ class Almanac extends Component {
                   {
                     _.range(numGood).map(i => (
                       <div key={i}>
-                        <h4><strong>{eventArr[i].name}</strong></h4>
+                        <h4 style={{ color: '#222' }}><strong>{eventArr[i].name}</strong></h4>
                         <div
                           style={{
                             color: '#777',
